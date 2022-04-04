@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="<%= action %>" method="POST">
+      <p>
+        titulo:<input type="text" name="titulo" value="<%= doc.titulo %>" />
+      </p>
+      <p>
+        sinopse:<input type="text" name="sinopse" value="<%= doc.sinopse %>" />
+      </p>
+      <p>
+        duracao:<input
+          type="number"
+          name="duracao"
+          value="<%= doc.duracao %>"
+        />
+      </p>
+      <p>
+        dataLancamento:<input
+          type="date"
+          name="dataLancamento"
+          value="<%= doc.dataLancamento %>"
+        />
+      </p>
+      <p>imagem:<input type="url" name="imagem" value="<%= doc.imagem %>" /></p>
+      <p>
+        categorias:<input
+          type="text"
+          name="categorias"
+          value="<%= doc.categorias %>"
+        />
+      </p>
+      <input type="submit" value="Salvar" />
+    </form>
+  </body>
+</html>

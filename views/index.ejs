@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <% docs.forEach(function(filme){ %>
+      <li>
+        <p>
+          <img id="imagem" alt="Imagem do filme " src="<%=filme.imagem %>" />
+          <a href="/edit/<%= filme._id %>"> <%= filme.titulo %> </a> &nbsp;
+          <a
+            href="/delete/<%= filme._id %>"
+            onclick="return confirm('Tem certeza que deseja excluir?');"
+          >
+            X
+          </a>
+        </p>
+      </li>
+      <% }) %>
+    </ul>
+    <hr />
+    <a href="/new">Cadastrar novo filme</a>
+  </body>
+</html>
+
+<!--
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
+-->
